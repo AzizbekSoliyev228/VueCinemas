@@ -14,9 +14,11 @@ a {
 ul {
     list-style: none;
 }
-body{
+
+body {
     background: #040D1F;
 }
+
 a,
 span,
 label,
@@ -39,6 +41,24 @@ img {
     line-height: 20px;
     font-family: 'CR';
     color: #FFFFFF;
+}
+
+.link {
+    padding: 17px 48px;
+    background: #F18128;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 12px;
+    font-family: 'RM';
+    text-align: justify;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #fff;
+    background:
+        #040D1F;
 }
 
 .header {
@@ -88,7 +108,8 @@ img {
     color: #FFFFFF;
     position: relative;
 }
-.nav__link::after{
+
+.nav__link::after {
     position: absolute;
     content: '';
     left: 0;
@@ -100,14 +121,172 @@ img {
     transform: scale(0);
     transition: 0.3s;
 }
-.nav__link:hover::after{
+
+.nav__link:hover::after {
     transform: scale(1);
 }
 
 
-.header__content{
+.header__content {
     background: rgba(7, 15, 25, 0.75) url(../img/header-bg.png) no-repeat center / cover;
     background-blend-mode: darken;
     flex-grow: 1;
-    
+
+}
+
+.header__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header__info>h1 {
+    font-family: 'MB';
+    font-size: 64px;
+    line-height: 78px;
+    color: #FFFFFF;
+
+}
+
+.header__info>p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'MR';
+    text-align: justify;
+    color: #C8C8C8;
+    max-width: 570px;
+}
+
+.header__links {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Films start */
+.films__card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 367px;
+    gap: 30px;
+}
+
+.films__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 6px;
+    padding: 18.5px 14.5px;
+}
+
+.films__item span {
+    margin: 12px 0 30px 0;
+    font-family: 'MR';
+    font-size: 14px;
+    line-height: 10px;
+    color: #FFFFFF;
+    padding: 7px 28px;
+    background: rgba(7, 15, 25, 0.2);
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+}
+
+.films__item h3 {
+    font-family: 'MR';
+    font-size: 22px;
+    line-height: 27px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 12px;
+
+
+}
+
+.films__card p {
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.films__item:nth-of-type(1) {
+    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film1.png') no-repeat center /cover;
+}
+.films__item:nth-of-type(2) {
+    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film2.png') no-repeat center /cover;
+}
+
+.films__item:nth-of-type(3) {
+    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film3.png') no-repeat center /cover;
+}
+.films__item:nth-of-type(4) {
+    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film4.png') no-repeat center /cover;
+}
+
+
+
+
+
+
+
+/* Films end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.burger__btn {
+    display: none;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background: #F18128;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.burger__btn>span {
+    width: 70%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+.burger__btn>span:nth-of-type(1) {
+    top: 30%;
+
+}
+
+.burger__btn>span:nth-of-type(3) {
+    top: 70%;
+
+}
+
+#clicker:checked~.burger__btn span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#clicker:checked~.burger__btn span:nth-of-type(1) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+}
+
+#clicker:checked~.burger__btn span:nth-of-type(3) {
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
 }
