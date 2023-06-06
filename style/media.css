@@ -1,3 +1,29 @@
+@media(max-width: 1920px){
+    .video__item {
+        right: 0;
+        transform: scale(1.35) translateX(0%);
+    }
+   
+}
+@media(max-width: 976px){
+    .films__card{
+        grid-template-columns: repeat(2,1fr);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .video::before{
+        background: rgba(244, 252, 255, 0.5);
+    }
+}
+@media (max-width:776px){
+    .collection__card{
+        grid-template-columns: repeat(1,1fr);
+        max-width: 450px;
+        margin: 0 auto;
+        grid-template-rows: 200px 200px 200px;    
+    }
+    
+}
 @media(max-width: 676px) {
     .burger__btn {
         display: inline-block;
@@ -53,4 +79,15 @@
     .header__info{
         gap: 10px;
     }
+    .films__card{
+        grid-template-columns: repeat(1,1fr);
+        max-width: 250px;
+    }
+    .video__item{
+        display: none;
+    }
+    .video::before{    
+        background: rgba(244, 252, 255, 0.9);
+    }
 }
+

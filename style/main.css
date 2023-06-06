@@ -29,6 +29,7 @@ img {
 .container {
     max-width: 1110px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .logo {
@@ -59,6 +60,27 @@ img {
     color: #fff;
     background:
         #040D1F;
+}
+
+.titles {
+    display: inline-block;
+    font-family: 'CR';
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: #F18128;
+    position: relative;
+    margin: 60px 0 68px 0;
+}
+
+.titles::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    bottom: -10px;
+    background: #F18128;
 }
 
 .header {
@@ -166,6 +188,10 @@ img {
 }
 
 /* Films start */
+.films {
+    margin-bottom: 77px;
+}
+
 .films__card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -214,6 +240,7 @@ img {
 .films__item:nth-of-type(1) {
     background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film1.png') no-repeat center /cover;
 }
+
 .films__item:nth-of-type(2) {
     background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film2.png') no-repeat center /cover;
 }
@@ -221,6 +248,7 @@ img {
 .films__item:nth-of-type(3) {
     background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film3.png') no-repeat center /cover;
 }
+
 .films__item:nth-of-type(4) {
     background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%), url('../img/films/film4.png') no-repeat center /cover;
 }
@@ -290,3 +318,124 @@ img {
     transform: translate(-50%, -50%) rotate(45deg);
     top: 50%;
 }
+
+/* video start */
+.video {
+    position: relative;
+    padding: 42px 0 80px 0;
+    overflow: hidden;
+}
+
+.video::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, #DEF7FF 0%, #F4FCFF 45.64%, rgba(255, 255, 255, 0) 100.72%);
+    z-index: 4;
+}
+
+.video__item {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    height: 100%;
+    transform: scale(1.35) translateX(70%);
+}
+
+.video__content {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 51px;
+}
+
+.video__content img {
+    max-width: 445px;
+    width: 100%;
+}
+
+.video__content p {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: justify;
+    color: #000000;
+    max-width: 558px;
+    margin-bottom: 4px;
+}
+
+/* VIDEO END */
+
+
+
+/* collection start */
+.collection {
+    margin-bottom: 63px;
+}
+
+.collection__card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 193px;
+    gap: 30px;
+}
+
+.collection__item {
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.collection__item:hover::before,.collection__item:hover::after{
+    transform: translateY(0%) rotateY(0deg);
+}
+    
+
+.collection__item h3 {
+    font-family: 'CB';
+    font-size: 20px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.collection__item:nth-of-type(1) {
+    background: linear-gradient(270deg, rgba(7, 15, 25, 0.56) 0%, rgba(49, 114, 9, 0.56) 100%), url('../img/collections/col1.png') no-repeat center/ cover;
+
+}
+.collection__item:nth-of-type(2) {
+    background: linear-gradient(270deg, rgba(7, 15, 25, 0.56) 0%, rgba(49, 114, 9, 0.56) 100%), url('../img/collections/col2.png') no-repeat center/ cover;
+
+}
+.collection__item:nth-of-type(3) {
+    background: linear-gradient(270deg, rgba(7, 15, 25, 0.56) 0%, rgba(49, 114, 9, 0.56) 100%), url('../img/collections/col3.png') no-repeat center/ cover;
+
+}
+
+.collection__item::before {
+    position: absolute;
+    left: 6px;
+    top: 7px;
+    content: url('../img/figure.svg');
+    transition: 0.3s;
+    transform: translateY(-120%) rotateY(360deg);
+}
+
+.collection__item::after {
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    content: url('../img/figure.svg');
+    transition: 0.3s;
+    transform: translateY(120%) rotateY(360deg);
+}
+
+/* collection end */
